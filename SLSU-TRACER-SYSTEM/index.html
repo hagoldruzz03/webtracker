@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SLSU EE Graduate Tracer System</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <img src="images/slsu-logo.png" alt="SLSU Logo" class="logo-img" />
+          <img src="images/iiee-logo.png" alt="IIEE Logo" class="logo-img" />
+          <span class="nav-title">SLSU EE Tracer</span>
+        </div>
+        <ul class="nav-menu">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#alumni" class="nav-link">Alumni Directory</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+          <li>
+            <button id="adminLoginBtn" class="admin-btn">
+              <i class="fas fa-user-shield"></i> Admin
+            </button>
+          </li>
+        </ul>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
+
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <h1 class="hero-title">
+          Web-Based Tracer for Bachelor of Science in Electrical Engineering
+          Graduates
+        </h1>
+        <p class="hero-subtitle">Southern Luzon State University</p>
+        <div class="search-container">
+          <div class="search-box">
+            <i class="fas fa-search"></i>
+            <input
+              type="text"
+              id="searchInput"
+              placeholder="Find an alumni by name..."
+            />
+          </div>
+          <div id="searchResults" class="search-results"></div>
+        </div>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-card">
+          <i class="fas fa-users"></i>
+          <h3 id="totalAlumni">0</h3>
+          <p>Total Alumni</p>
+        </div>
+        <div class="stat-card">
+          <i class="fas fa-briefcase"></i>
+          <h3 id="employedCount">0</h3>
+          <p>Employed</p>
+        </div>
+        <div class="stat-card">
+          <i class="fas fa-certificate"></i>
+          <h3 id="licensedCount">0</h3>
+          <p>Licensed</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about-section">
+      <div class="container">
+        <h2 class="section-title">About Us</h2>
+        <div class="about-content">
+          <div class="about-text">
+            <p>
+              The SLSU EE Graduate Tracer System is a comprehensive platform
+              designed to monitor and track the career progression of Electrical
+              Engineering graduates from Southern Luzon State University. This
+              initiative aims to maintain strong connections with our alumni and
+              provide valuable insights into their professional achievements.
+            </p>
+            <p>
+              Our mission is to foster a vibrant alumni community, celebrate
+              their successes, and strengthen the bond between graduates and the
+              institution that shaped their careers.
+            </p>
+          </div>
+          <div class="contact-cards">
+            <div class="contact-card">
+              <i class="fas fa-envelope"></i>
+              <h4>Email</h4>
+              <p>electricalengineering.slsu@gmail.com</p>
+            </div>
+            <div class="contact-card">
+              <i class="fab fa-facebook"></i>
+              <h4>Facebook</h4>
+              <a href="https://www.facebook.com/SLSUIIEESC" target="_blank"
+                >SLSU IIEE Student Chapter</a
+              >
+            </div>
+            <div class="contact-card">
+              <i class="fas fa-map-marker-alt"></i>
+              <h4>Address</h4>
+              <p>Quezon Avenue, Kulapi, Lucban, 4328 Quezon, Philippines</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="alumni" class="alumni-section">
+      <div class="container">
+        <h2 class="section-title">EE Alumni Batch 2007-2024</h2>
+        <div class="batch-filter-container">
+          <div class="batch-search-box">
+            <i class="fas fa-filter"></i>
+            <input
+              type="text"
+              id="batchSearchInput"
+              placeholder="Filter by batch year (e.g., 2020)..."
+            />
+            <button
+              id="clearBatchFilter"
+              class="clear-filter-btn"
+              style="display: none"
+            >
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+        </div>
+        <div class="batch-grid" id="batchGrid"></div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="contact-info">
+          <div class="info-item">
+            <i class="fas fa-phone"></i>
+            <div>
+              <h4>Phone</h4>
+              <p>Contact us through our official channels</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <h4>Email</h4>
+              <p>electricalengineering.slsu@gmail.com</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <h4>Location</h4>
+              <p>Quezon Avenue, Kulapi, Lucban, 4328 Quezon, Philippines</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h4>SLSU EE Tracer</h4>
+            <p>Tracking excellence, celebrating success.</p>
+          </div>
+          <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#alumni">Alumni</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Connect</h4>
+            <div class="social-links">
+              <a href="https://www.facebook.com/SLSUIIEESC" target="_blank"
+                ><i class="fab fa-facebook"></i
+              ></a>
+              <a href="mailto:electricalengineering.slsu@gmail.com"
+                ><i class="fas fa-envelope"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>
+            &copy; 2024 Southern Luzon State University. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <div id="adminLoginModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Admin Login</h2>
+        <form id="adminLoginForm">
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" required />
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" required />
+          </div>
+          <button type="submit" class="btn-primary">Login</button>
+        </form>
+      </div>
+    </div>
+
+    <div id="alumniListModal" class="modal">
+      <div class="modal-content modal-large">
+        <span class="close">&times;</span>
+        <h2 id="batchTitle"></h2>
+        <div id="alumniList" class="alumni-list"></div>
+      </div>
+    </div>
+
+    <div id="alumniDetailsModal" class="modal">
+      <div class="modal-content modal-large">
+        <span class="close">&times;</span>
+        <div id="alumniDetails"></div>
+      </div>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
